@@ -5,6 +5,10 @@ pipeline {
         nodejs "node18"
     }
 
+    triggers {
+        githubPush()
+    }
+
     stages {
         stage('Checking'){
             steps {
